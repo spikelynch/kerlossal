@@ -1,0 +1,8 @@
+mine
+refinery
+factory
+forge
+reactor
+works
+warehouse
+yard

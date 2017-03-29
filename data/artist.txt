@@ -1,0 +1,11 @@
+artist
+sculptor
+composer
+wizard
+hipster
+shaman
+performance artist
+painter
+senior citizen
+scientist
+diplomat

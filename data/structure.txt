@@ -1,0 +1,25 @@
+house
+cradle
+staircase
+bookshelf
+apartment
+museum
+gallery
+power station
+golf course
+stadium
+jetty
+carousel
+carwash
+opera house
+music studio
+stables
+boatramp
+national park
+caravan
+barrio
+palace
+stairwell
+gallows
+operating theatre
+chamber
