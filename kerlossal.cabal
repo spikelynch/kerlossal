@@ -24,6 +24,8 @@ executable kerlossal
                      , directory
                      , random
                      , monad-loops
+                     , blaze-markup
+                     , titlecase
                      , textgen >= 0.1
 
 source-repository head

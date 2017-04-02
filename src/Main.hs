@@ -11,7 +11,11 @@ import System.Environment (getArgs)
 import System.Directory (getDirectoryContents)
 import Text.Regex.Posix
 import qualified Data.Text as T
+import Text.Blaze
+import Text.Blaze.Renderer.Pretty
 import qualified Data.Text.IO as Tio
+import Data.Text.Titlecase
+
 
 import TextGen (
   TextGen
@@ -85,11 +89,26 @@ crafts v = list [ someone, uses, stuff, to_transform, old, word "into", new ]
         new = aan $ list [ perhaps ( 2, 3 ) (vg "good_adj"), vg "magic_site" ]
 
 
+artist :: Vocab -> TextGenCh
+artist v = list [ vg "givenname", vg "surname" ]
+  where vg = vocabGet v
+
+
+artworks :: Vocab -> TextGenCh
+artworks v = list [ vg "aesthetic", vg "artwork", word "by", artist v ]
+  where vg = vocabGet v
+
+
+max_length :: Int
+max_length = 140
+
 main :: IO ()
 main = do
   args <- getArgs
   v <- loadVocab (getDir args)
-  cr <- return $ crafts v
+  cr <- return $ artworks v
   gf <- return $ runTextGen cr
-  res <- getStdRandom gf
-  putStrLn $ smartjoin res
+  result <- iterateUntil (\s -> length s <= max_length) $ do 
+    kerlossal <- getStdRandom gf
+    return $ smartjoin kerlossal
+  putStrLn $ renderMarkup $ toMarkup $ titlecase $ T.pack result
