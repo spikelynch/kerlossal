@@ -1,21 +1,26 @@
 abstract
+dadaist
 surreal
 surrealist
 deconstructed
 gothic
 psychedelic
 retro
+futurist
+pre-Raphaelite
+baroque
+rococo
+Romansque
+gothic
 steampunk
 cyberpunk
 feminist
-transgressive
 liminal
 outre
 constructivist
 naive
 formalist
 brutalist
-ghostly
 ephemeral
 minimalist
 political
@@ -26,6 +31,5 @@ classical
 fauvist
 cubist
 aesthetic
-gloomy
 spiritual
 

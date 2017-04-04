@@ -1,0 +1,205 @@
+abbey
+airport terminal
+alley
+amphitheater
+amusement park
+aquarium
+aqueduct
+arch
+art gallery
+art studio
+assembly line
+attic
+auditorium
+apartment building
+badlands
+ballroom
+bamboo forest
+banquet hall
+bar
+baseball field
+basement
+basilica
+bayou
+beauty salon
+bedroom
+boardwalk
+boat deck
+bookstore
+botanical garden
+bowling alley
+boxing ring
+bridge
+building facade
+bus interior
+butchers shop
+butte
+bakery
+cafeteria
+campsite
+candy store
+canyon
+castle
+cemetery
+chalet
+classroom
+closet
+clothing store
+coast
+cockpit
+coffee shop
+conference center
+conference room
+construction site
+corn field
+corridor
+cottage garden
+courthouse
+courtyard
+creek
+crevasse
+crosswalk
+cathedral
+church
+dam
+dining room
+dock
+dorm room
+driveway
+desert
+desert
+dinette
+doorway
+engine room
+excavation
+fairway
+fire escape
+fire station
+food court
+forest path
+forest road
+formal garden
+fountain
+field
+field
+galley
+game room
+garbage dump
+gas station
+gift shop
+golf course
+harbor
+herb garden
+highway
+home office
+hospital
+hospital room
+hot spring
+hotel room
+hotel
+ice cream parlor
+iceberg
+igloo
+islet
+ice skating rink
+inn
+jail cell
+kasbah
+kindergarden classroom
+kitchen
+kitchenette
+laundromat
+lighthouse
+living room
+lobby
+locker room
+mansion
+marsh
+martial arts gym
+mausoleum
+medina
+motel
+mountain
+mountain snowy
+music studio
+market
+monastery
+museum
+nursery
+ocean
+office
+office building
+orchard
+pagoda
+palace
+pantry
+parking lot
+parlor
+pasture
+patio
+pavilion
+phone booth
+picnic area
+playground
+plaza
+pond
+pulpit
+racecourse
+raft
+railroad track
+rainforest
+reception
+residential neighborhood
+restaurant
+restaurant kitchen
+restaurant patio
+rice paddy
+river
+rock arch
+rope bridge
+ruin
+runway
+sandbar
+schoolhouse
+sea cliff
+shed
+shoe shop
+shopfront
+shower
+ski resort
+ski slope
+sky
+skyscraper
+slum
+snowfield
+staircase
+supermarket
+swamp
+stadium
+stadium
+stage
+subway station
+swimming pool
+television studio
+topiary garden
+tower
+train railway
+tree farm
+trench
+temple
+temple
+track
+train station
+underwater
+valley
+vegetable garden
+veranda
+viaduct
+volcano
+waiting room
+water tower
+watering hole
+wheat field
+wind farm
+windmill
+yard

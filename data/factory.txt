@@ -6,3 +6,8 @@ reactor
 works
 warehouse
 yard
+store
+chamber
+dump
+ground
+field

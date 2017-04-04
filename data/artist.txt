@@ -1,11 +1,47 @@
 artist
 sculptor
 composer
-wizard
-hipster
 shaman
 performance artist
 painter
 senior citizen
 scientist
-diplomat
+dancer
+musician
+fibre artist
+craftsperson
+woodsman
+bricoleur
+flaneur
+schoolchild
+student
+art student
+professor
+ice dancer
+tribesman
+nomad
+shepherd
+lumberjack
+miner
+artisan
+farmer
+herdsman
+bullocky
+poet
+writer
+seamstress
+dressmaker
+sailor
+model
+fashion designer
+designer
+graphic artist
+graphic designer
+programmer
+developer
+intern
+venture capitalist
+singer
+infant
+soldier
+troubador

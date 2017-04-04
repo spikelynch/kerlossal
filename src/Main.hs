@@ -33,22 +33,26 @@ import TextGen (
 
 type TextGenCh = TextGen StdGen [[Char]]
 
-type Vocab = Map String TextGenCh
+--type Vocab = Map String TextGenCh
+
+type Vocab = (String -> TextGenCh)
 
 isTextFile :: String -> Bool
 isTextFile f = f =~ ".txt$"
+
 
 
 loadVocab :: String -> IO Vocab
 loadVocab dir = do
   files <- getDirectoryContents dir
   list <- mapM loadFile $ filter isTextFile files
-  return $ Map.fromList list
+  return $ vocabGet $ Map.fromList list
     where loadFile f = do
             gen <- loadOptions ( dir ++ f )
             return ( f, gen )
 
-vocabGet :: Vocab -> String -> TextGenCh
+
+vocabGet :: Map String TextGenCh -> String -> TextGenCh
 vocabGet v name = case Map.lookup (name ++ ".txt") v of
   Nothing -> word "not found"
   Just gen -> gen
@@ -56,48 +60,81 @@ vocabGet v name = case Map.lookup (name ++ ".txt") v of
 getDir (x:xs) = x
 getDir _      = "./"
 
+-- postprocess to remove the period
 
--- A Remarkable Time Laps Video of [effect] in a [thing]
-
--- [artwork] in a [location]
-
--- location = [ adjective, site ("abandoned leather mine") ]
-
--- [ artist ] [ verbs ] [ artworks ] ( in a [location] | out of [ stuff] )
-
--- [ artist ] [ transforms ] [ stuff ] into [ adjective ] [ artworks ]
-
--- [ artist ] uses [ stuff ] to transform [ boringlocation ] into [ magical location ]
-
--- stuff = [ adjective, including "his/her own" ] [ nouns |  mass noun ]
-
--- what happens when
-
--- what a [ large number of ] things look like
+mysmartjoin :: [ [Char] ] -> [ Char ]
+mysmartjoin xs = take ((length sentence) - 1) sentence
+  where sentence = smartjoin xs
 
 
-crafts :: Vocab -> TextGenCh
-crafts v = list [ someone, uses, stuff, to_transform, old, word "into", new ]
-  where someone = aan $ list [ perhaps ( 2, 3 ) n, a ]
-        vg = vocabGet v
-        n = vg "nationality"
-        a = vg "artist"
-        uses = word "uses"
-        stuff = vg "substance"
-        to_transform = list [ word "to", vg "transform" ]
-        old = aan $ list [ perhaps ( 1, 2 ) (vg "bad_adj"), perhaps (1, 2) (vg "substance"), vg "factory" ]
-        new = aan $ list [ perhaps ( 2, 3 ) (vg "good_adj"), vg "magic_site" ]
+-- some shortcuts for probabilities
 
+-- p50 = perhaps ( 1, 2 )
+
+-- p33 = perhaps ( 1, 3 )
+
+p66 = perhaps ( 2, 3 )
 
 artist :: Vocab -> TextGenCh
-artist v = list [ vg "givenname", vg "surname" ]
-  where vg = vocabGet v
-
+artist v = choose [ name, description ]
+  where name = list [ v "givenname", v "surname" ]
+        description = aan $ list [ n, a ]
+        n = v "nationality"
+        a = v "artist"
 
 artworks :: Vocab -> TextGenCh
-artworks v = list [ vg "aesthetic", vg "artwork", word "by", artist v ]
-  where vg = vocabGet v
+artworks v = list [ v "aesthetic", v "artwork" ]
 
+oldSite :: Vocab -> TextGenCh
+oldSite v = choose [ site, factory ]
+  where site = aan $ list [ p66 adject, v "site" ]
+        factory = aan $ list [ adject, v "substance", v "factory" ]
+        adject = choose [ v "bad_adj", v "nationality" ]
+        
+artSite :: Vocab -> TextGenCh
+artSite v = aan $ list [ p66 $ v "good_adj", v "magic_site" ]
+
+-- The next TextGenChs are the alternative sentences
+
+transformSite :: Vocab -> TextGenCh
+transformSite v = list [ someone, uses, stuff, to_transform, old, word "into", new ]
+  where someone = artist v
+        uses =  word "uses"
+        stuff = choose [ v "substance", aan $ v "thing", v "things" ]
+        to_transform = list [ word "to", v "transform" ]
+        old = oldSite v
+        new = artSite v
+
+
+transformThings :: Vocab -> TextGenCh
+transformThings v = list [ artist v, v "creates", v "things", word "into", artworks v ]
+
+
+artworksByArtist :: Vocab -> TextGenCh
+artworksByArtist v = list [ artworks v, word "by", artist v ]
+
+structureShape :: Vocab -> TextGenCh
+structureShape v = choose [ locbefore, locafter ]
+  where locbefore = list [ word "in", v "city", word ",", structure ]
+        locafter = list [ structure, word "in", v "city" ]
+        structure = list [ aan $ v "structure", v "like", aan $ v "thing" ]
+        
+
+artworkInPlace :: Vocab -> TextGenCh
+artworkInPlace v = aan $ list [ artsite v, v "inrelation", place ]
+  where place = choose [ v "city", oldSite ]
+
+
+
+kerlossus :: Vocab -> TextGenCh
+kerlossus v = choose [ s1, s2, s3, s4, s5 ]
+  where s1 = transformSite v
+        s2 = transformThings v
+        s3 = artworksByArtist v
+        s4 = structureShape v
+        s5 = artworkInPlace v
+
+        
 
 max_length :: Int
 max_length = 140
@@ -106,9 +143,9 @@ main :: IO ()
 main = do
   args <- getArgs
   v <- loadVocab (getDir args)
-  cr <- return $ artworks v
+  cr <- return $ kerlossus v
   gf <- return $ runTextGen cr
-  result <- iterateUntil (\s -> length s <= max_length) $ do 
+  result <- iterateUntil (\s -> length s <= max_length) $ do
     kerlossal <- getStdRandom gf
-    return $ smartjoin kerlossal
+    return $ mysmartjoin kerlossal
   putStrLn $ renderMarkup $ toMarkup $ titlecase $ T.pack result

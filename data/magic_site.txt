@@ -7,11 +7,31 @@ grove
 fairyland
 fantasy world
 haven
-boudoir
 bordello
 kaleidoscope
-seraglio
 fun-fair
 carnival
 amusement park
 pleasure palace
+forest
+city
+grotto
+chasm
+concert
+orchestra
+dell
+jungle
+heaven
+paradise
+abyss
+grove
+nest
+bower
+opera house
+concert hall
+bowling alley
+sideshow
+theatre
+amphitheatre
+temple
+cathedral
