@@ -6,12 +6,14 @@ avant-garde
 baroque
 brutalist
 classical
+communist
 constrained
 constructivist
 cubist
 cyberpunk
 dadaist
 deconstructed
+devised
 disco
 dub
 ephemeral
@@ -37,7 +39,7 @@ minimalist
 modernist
 naive
 oulipian
-outre
+outré
 paleo
 political
 pop
@@ -51,6 +53,8 @@ realist
 retro
 rococo
 romantic
+situationist
+site-specific
 social realist
 soviet realist
 spiritual

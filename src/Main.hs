@@ -113,6 +113,7 @@ aNumberOf = list [ n1, n2 ]
         n2 = choose $ map word [ "hundred", "thousand" ]
 
 
+
 amountOfStuff :: Vocab -> TextGenCh
 amountOfStuff v = list [ aNumberOf, v "measures", word "of", v "substance" ]
 
@@ -194,7 +195,6 @@ transformsSite v = list [ someone, uses, artStuff v, transformation ]
         o2n = list [ word "to", v "transform", oldSite v, word "into", artSite v ]
         o = list [ word "to transform", oldSite v ]
 
-
 -- there are different vocab lists for "creates X out of Y" to match
 -- verbs with prepositions
 
@@ -219,13 +219,17 @@ structureShape v = choose [ locbefore, locafter ]
         structure = list [ aan $ v "structure", v "like", aan $ v "thing" ]
         
 
-
+stuffInPlace :: Vocab -> TextGenCh
+stuffInPlace v = list [ amountOfStuff v, p, v "city", ma ]
+  where p = choose $ map word [ "in", "above", "below", "outside", "over", "behind" ]
+        ma = p50 $ list [ word "by", artist v ]
 
 kerlossus :: Vocab -> TextGenCh
 kerlossus v = weighted [
   ( 10, transformsSite v ),
-  ( 30, transformsThings v ),
-  ( 40, artworksByArtist v ),
+  ( 20, transformsThings v ),
+  ( 30, artworksByArtist v ),
+  ( 20, stuffInPlace v ),
   ( 20, structureShape v )
   ]
 
