@@ -6,3 +6,9 @@ creates
 evokes
 produces
 renders
+compiles
+constructs
+builds
+composes
+narrates
+deconstructs

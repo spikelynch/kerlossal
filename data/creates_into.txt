@@ -12,3 +12,5 @@ rehabilitates
 turns
 transforms
 changes
+arranges
+composes

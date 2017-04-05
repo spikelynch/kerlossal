@@ -3,4 +3,8 @@ bejewels
 generates
 carves
 sculpts
+composes
+builds
+arranges
+renders
 
