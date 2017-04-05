@@ -168,22 +168,26 @@ generalArtwork v = weighted [
   ]
 
 
+artStuff :: Vocab -> TextGenCh
+artStuff v = choose [
+  v "substance",
+  amountOfStuff v,
+  list [ p66 $ aNumberOf, v "things" ],
+  artworks v,
+  manyArtworks v
+  ]
+
+
 -- The next TextGenChs are the alternative sentences
 
 transformsSite :: Vocab -> TextGenCh
-transformsSite v = list [ someone, uses, stuff, to_transform, old, word "into", new ]
+transformsSite v = list [ someone, uses, artStuff v, transformation ]
   where someone = artist v
         uses =  word "uses"
-        stuff = choose [
-          v "substance",
-          amountOfStuff v,
-          list [ p66 $ aNumberOf, v "things" ],
-          artworks v,
-          manyArtworks v
-          ]
-        to_transform = list [ word "to", v "transform" ]
-        old = oldSite v
-        new = artSite v
+        transformation = choose [ o2n, o ]
+        o2n = list [ word "to", v "transform", oldSite v, word "into", artSite v ]
+        o = list [ word "to transform", oldSite v ]
+
 
 -- there are different vocab lists for "creates X out of Y" to match
 -- verbs with prepositions
@@ -211,11 +215,12 @@ structureShape v = choose [ locbefore, locafter ]
 
 
 kerlossus :: Vocab -> TextGenCh
-kerlossus v = choose [ s1, s2, s3, s4 ]
-  where s1 = transformsSite v
-        s2 = transformsThings v
-        s3 = artworksByArtist v
-        s4 = structureShape v
+kerlossus v = weighted [
+  ( 10, transformsSite v ),
+  ( 30, transformsThings v ),
+  ( 40, artworksByArtist v ),
+  ( 20, structureShape v )
+  ]
 
 testescape :: Vocab -> TextGenCh
 testescape _ = word "Mix & match <hi there> this is bad for HTML'''"
