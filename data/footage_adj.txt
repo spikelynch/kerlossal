@@ -8,3 +8,5 @@ restored
 VR
 360-degree
 pristine
+lo-fi
+virtual
