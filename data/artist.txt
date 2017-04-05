@@ -5,6 +5,9 @@ shaman
 performance artist
 painter
 senior citizen
+researcher
+docent
+police officer
 scientist
 dancer
 musician
@@ -12,12 +15,15 @@ fibre artist
 craftsperson
 woodsman
 bricoleur
-flaneur
+flâneur
 schoolchild
 student
+vagrant
 art student
 professor
 ice dancer
+dancer
+merchant
 tribesman
 nomad
 shepherd
@@ -25,9 +31,13 @@ lumberjack
 miner
 artisan
 farmer
+visiting fellow
 herdsman
-bullocky
+roustabout
+carnie
 poet
+stranger
+outsider
 writer
 seamstress
 dressmaker
@@ -39,9 +49,11 @@ graphic artist
 graphic designer
 programmer
 developer
+thaumaturge
 intern
 venture capitalist
 singer
 infant
 soldier
 troubador
+necromancer
