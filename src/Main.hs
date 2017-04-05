@@ -128,6 +128,12 @@ artworks v = list [ v "aesthetic", choose [ depiction, artwork ] ]
   where depiction = list [ v "artwork", subject v ]
         artwork = choose [ v "artwork", v "artwork_non_rep" ]
 
+artworkSimple :: Vocab -> TextGenCh
+artworkSimple v = list [
+  v "aesthetic", choose [ v "artwork", v "artwork_non_rep" ]
+  ]
+
+
 oldSite :: Vocab -> TextGenCh
 oldSite v = choose [ site, factory ]
   where site = aan $ list [ p66 adject, v "site" ]
@@ -196,10 +202,11 @@ transformsThings :: Vocab -> TextGenCh
 transformsThings v = choose [ into, outof, with ]
   where a = artist v
         t = v "things"
-        w = artworks v
-        into = list [ a, v "creates_into", t, word "into", w ]
-        outof = list [ a, v "creates_outof", w, choose [ word "out of", word "from" ], t ]
-        with = list [ a, v "creates_with", w, word "with", t ]
+        works = artworks v
+        ws = artworkSimple v
+        into = list [ a, v "creates_into", t, word "into", works ]
+        outof = list [ a, v "creates_outof", ws, choose [ word "out of", word "from" ], t ]
+        with = list [ a, v "creates_with", ws, word "with", t ]
 
 
 artworksByArtist :: Vocab -> TextGenCh

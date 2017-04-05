@@ -9,5 +9,3 @@ compiles
 constructs
 builds
 composes
-narrates
-deconstructs

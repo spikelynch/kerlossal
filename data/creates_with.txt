@@ -1,9 +1,11 @@
 produces
 bejewels
+decorates
+improves
 generates
 carves
 sculpts
 composes
 builds
 arranges
-renders
+juxtaposes

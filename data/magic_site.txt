@@ -4,35 +4,44 @@ amusement park
 apartment
 bordello
 bower
+buffet
 carnival
 cathedral
+cavern
 chasm
 city
 concert
 concert hall
 dell
+desert
 fairyland
 fantasia
 forest
 fun-fair
+garden
 glade
 grotto
 grove
 haven
 jungle
 kaleidoscope
+labyrinth
+maze
+medina
 nest
 ocean
 opera house
 orchestra
-pleasure palace
+palace
 pool
 rainbow
 sideshow
+smorgasbord
 temple
 theatre
-celestial sphere
-sea
+orb
+sphere
+mezzanine
 chatroom
 forum
 agora
