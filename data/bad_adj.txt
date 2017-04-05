@@ -25,3 +25,5 @@ run-down
 underutilised
 unfashionable
 uninviting
+problematic
+decrepit

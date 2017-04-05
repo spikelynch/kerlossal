@@ -10,7 +10,7 @@ futurist
 pre-Raphaelite
 baroque
 rococo
-Romansque
+Romanesque
 gothic
 steampunk
 cyberpunk
@@ -32,4 +32,20 @@ fauvist
 cubist
 aesthetic
 spiritual
-
+erotic
+pornographic
+krautrock
+punk
+grunge
+disco
+post-modern
+8-bit
+vapourwave
+ironic
+hyperrealist
+soviet realist
+constrained
+oulipian
+metafictional
+metaphysical
+avant-garde

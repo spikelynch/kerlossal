@@ -1,37 +1,43 @@
-glade
-forest
-rainbow
-pool
-ocean
-grove
-fairyland
-fantasy world
-haven
-bordello
-kaleidoscope
-fun-fair
-carnival
-amusement park
-pleasure palace
-forest
-city
-grotto
-chasm
-concert
-orchestra
-dell
-jungle
-heaven
-paradise
 abyss
-grove
-nest
-bower
-opera house
-concert hall
-bowling alley
-sideshow
-theatre
 amphitheatre
-temple
+amusement park
+apartment
+bordello
+bower
+carnival
 cathedral
+chasm
+city
+concert
+concert hall
+dell
+fairyland
+fantasia
+forest
+fun-fair
+glade
+grotto
+grove
+haven
+jungle
+kaleidoscope
+nest
+ocean
+opera house
+orchestra
+pleasure palace
+pool
+rainbow
+sideshow
+temple
+theatre
+celestial sphere
+sea
+chatroom
+forum
+agora
+pavillion
+belvedere
+lookout
+calliope
+idyll

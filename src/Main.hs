@@ -23,10 +23,12 @@ import TextGen (
   , word
   , aan
   , choose
+  , weighted
   , list
   , randrep
   , perhaps
   , smartjoin
+  , dumbjoin
   , upcase
   , loadOptions
   )
@@ -71,9 +73,30 @@ mysmartjoin xs = take ((length sentence) - 1) sentence
 
 -- p50 = perhaps ( 1, 2 )
 
--- p33 = perhaps ( 1, 3 )
+p33 = perhaps ( 1, 3 )
 
 p66 = perhaps ( 2, 3 )
+
+-- a utility which runs a generator until it gets two different
+-- results
+
+twoDifferent :: TextGenCh -> IO ( [[Char]], [[Char]] )
+twoDifferent g = do
+  gf <- return $ runTextGen g
+  r1 <- getStdRandom gf
+  r2 <- iterateUntil (\s -> not $ dumbmatch r1 s) $ do
+    getStdRandom gf
+  return ( r1, r2 )
+  
+
+dumbmatch :: [[Char]] -> [[Char]] -> Bool
+dumbmatch r1 r2 = (dumbjoin r1) == (dumbjoin r2)
+
+--
+-- Basic components
+
+-- Note: plural artists require us to inflect verbs, which will
+-- need some TextGen plumbing
 
 artist :: Vocab -> TextGenCh
 artist v = choose [ name, description ]
@@ -81,6 +104,14 @@ artist v = choose [ name, description ]
         description = aan $ list [ n, a ]
         n = v "nationality"
         a = v "artist"
+
+--
+
+aNumberOf :: TextGenCh
+aNumberOf = list [ n1, n2 ]
+  where n1 = choose $ map word [ "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" ]
+        n2 = choose $ map word [ "hundred", "thousand" ]
+
 
 artworks :: Vocab -> TextGenCh
 artworks v = list [ v "aesthetic", v "artwork" ]
@@ -94,6 +125,37 @@ oldSite v = choose [ site, factory ]
 artSite :: Vocab -> TextGenCh
 artSite v = aan $ list [ p66 $ v "good_adj", v "magic_site" ]
 
+artworkInPlace :: Vocab -> TextGenCh
+artworkInPlace v = list [ artSite v, v "inrelation", place ]
+  where place = choose [ v "city", oldSite v ]
+
+
+manyArtworks :: Vocab -> TextGenCh
+manyArtworks v = list [ aNumberOf, p66 $ v "aesthetic", v "artwork" ]
+
+manyArtworksInPlace :: Vocab -> TextGenCh
+manyArtworksInPlace v = list [
+  manyArtworks v,
+  word "in",
+  choose [ oldSite v, artSite v ]
+  ]
+
+
+videoArt :: Vocab -> TextGenCh
+videoArt v = list [ p33 $ v "good_adj", v "footage_adj", v "footage" ]
+
+
+
+generalArtwork :: Vocab -> TextGenCh
+generalArtwork v = weighted [
+  ( 40, artworks v ),
+  ( 20, artworkInPlace v ),
+  ( 20, manyArtworksInPlace v),
+  ( 20, manyArtworks v),
+  ( 10, videoArt v )
+  ]
+
+
 -- The next TextGenChs are the alternative sentences
 
 transformSite :: Vocab -> TextGenCh
@@ -105,13 +167,12 @@ transformSite v = list [ someone, uses, stuff, to_transform, old, word "into", n
         old = oldSite v
         new = artSite v
 
-
 transformThings :: Vocab -> TextGenCh
 transformThings v = list [ artist v, v "creates", v "things", word "into", artworks v ]
 
 
 artworksByArtist :: Vocab -> TextGenCh
-artworksByArtist v = list [ artworks v, word "by", artist v ]
+artworksByArtist v = list [ generalArtwork v, word "by", artist v ]
 
 structureShape :: Vocab -> TextGenCh
 structureShape v = choose [ locbefore, locafter ]
@@ -120,20 +181,16 @@ structureShape v = choose [ locbefore, locafter ]
         structure = list [ aan $ v "structure", v "like", aan $ v "thing" ]
         
 
-artworkInPlace :: Vocab -> TextGenCh
-artworkInPlace v = aan $ list [ artsite v, v "inrelation", place ]
-  where place = choose [ v "city", oldSite ]
-
 
 
 kerlossus :: Vocab -> TextGenCh
-kerlossus v = choose [ s1, s2, s3, s4, s5 ]
+kerlossus v = choose [ s1, s2, s3, s4 ]
   where s1 = transformSite v
         s2 = transformThings v
         s3 = artworksByArtist v
         s4 = structureShape v
-        s5 = artworkInPlace v
 
+  
         
 
 max_length :: Int
