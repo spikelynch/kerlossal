@@ -71,7 +71,7 @@ mysmartjoin xs = take ((length sentence) - 1) sentence
 
 -- some shortcuts for probabilities
 
--- p50 = perhaps ( 1, 2 )
+p50 = perhaps ( 1, 2 )
 
 p33 = perhaps ( 1, 3 )
 
@@ -113,8 +113,20 @@ aNumberOf = list [ n1, n2 ]
         n2 = choose $ map word [ "hundred", "thousand" ]
 
 
+amountOfStuff :: Vocab -> TextGenCh
+amountOfStuff v = list [ aNumberOf, v "measures", word "of", v "substance" ]
+
+
+subject :: Vocab -> TextGenCh
+subject v = choose [ depiction, combination ]
+  where depiction = list [ word "of", things, p50 $ list [ word "and", things ] ]
+        combination = list [ v "combining", things, word "with", things ]
+        things = v "things"
+
 artworks :: Vocab -> TextGenCh
-artworks v = list [ v "aesthetic", v "artwork" ]
+artworks v = list [ v "aesthetic", choose [ depiction, artwork ] ]
+  where depiction = list [ v "artwork", subject v ]
+        artwork = choose [ v "artwork", v "artwork_non_rep" ]
 
 oldSite :: Vocab -> TextGenCh
 oldSite v = choose [ site, factory ]
@@ -164,8 +176,8 @@ transformsSite v = list [ someone, uses, stuff, to_transform, old, word "into", 
         uses =  word "uses"
         stuff = choose [
           v "substance",
-          aan $ v "thing",
-          v "things",
+          amountOfStuff v,
+          list [ p66 $ aNumberOf, v "things" ],
           artworks v,
           manyArtworks v
           ]
