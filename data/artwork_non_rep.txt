@@ -35,7 +35,6 @@ macrame
 needlepoint
 cartouches
 emoji
-site-specific installations
 installations
 musical instruments
 costumes
