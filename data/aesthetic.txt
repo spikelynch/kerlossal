@@ -4,6 +4,7 @@ abstract
 aesthetic
 avant-garde
 baroque
+black-and-white
 brutalist
 classical
 communist
@@ -28,6 +29,7 @@ grunge
 hyperrealist
 idealistic
 ironic
+kaleidoscopic
 krautrock
 liminal
 lowbrow
@@ -37,6 +39,7 @@ metafictional
 metaphysical
 minimalist
 modernist
+monotone
 naïve
 oulipian
 outré
@@ -45,6 +48,7 @@ political
 pop
 pornographic
 post-modern
+procedural
 pre-Raphaelite
 provocative
 psychedelic
