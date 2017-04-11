@@ -15,6 +15,7 @@ dark
 dazzling
 delicate
 delightful
+detailed
 dizzying
 eerie
 enchanting
@@ -23,6 +24,7 @@ enormous
 enticing
 erotic
 exciting
+exquisite
 fascinating
 fun-filled
 futuristic
@@ -33,9 +35,13 @@ hypnotic
 improving
 ineffable
 inviting
+lovely
+luxurious
 memorable
 moody
+mysterious
 new
+ornate
 pastel
 pointed
 provocative
