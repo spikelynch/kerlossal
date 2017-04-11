@@ -227,9 +227,9 @@ stuffInPlace v = list [ amountOfStuff v, p, v "city", ma ]
 kerlossus :: Vocab -> TextGenCh
 kerlossus v = weighted [
   ( 10, transformsSite v ),
-  ( 20, transformsThings v ),
+  ( 30, transformsThings v ),
   ( 30, artworksByArtist v ),
-  ( 20, stuffInPlace v ),
+  ( 10, stuffInPlace v ),
   ( 20, structureShape v )
   ]
 
