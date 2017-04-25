@@ -2,6 +2,7 @@
 Romanesque
 abstract
 aesthetic
+anamorphic
 avant-garde
 baroque
 black-and-white
@@ -26,6 +27,7 @@ formalist
 futurist
 gothic
 grunge
+hand-painted
 hyperrealist
 idealistic
 ironic
@@ -39,6 +41,8 @@ mannerist
 metafictional
 metaphysical
 minimalist
+mixed-media
+mixed-metal
 modernist
 monotone
 naïve
@@ -69,5 +73,6 @@ surreal
 surrealist
 trashy
 transcendentalist
+ubiquitous
 ultramontanist
 vapourwave

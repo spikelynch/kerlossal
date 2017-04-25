@@ -125,15 +125,20 @@ subject v = choose [ depiction, combination ]
         things = v "things"
 
 artworks :: Vocab -> TextGenCh
-artworks v = list [ v "aesthetic", choose [ depiction, artwork ] ]
+artworks v = list [ artAdj v, choose [ depiction, artwork ] ]
   where depiction = list [ v "artwork", subject v ]
         artwork = choose [ v "artwork", v "artwork_non_rep" ]
 
 artworkSimple :: Vocab -> TextGenCh
 artworkSimple v = list [
-  v "aesthetic", choose [ v "artwork", v "artwork_non_rep" ]
+  artAdj v, choose [ v "artwork", v "artwork_non_rep" ]
   ]
 
+artAdj :: Vocab -> TextGenCh
+artAdj v = weighted [
+  ( 60, weighted [ ( 60, v "aesthetic"), ( 40, v "good_adj" ) ] ),
+  ( 40, list [ v "good_adj", v "aesthetic" ] )
+  ]
 
 oldSite :: Vocab -> TextGenCh
 oldSite v = choose [ site, factory ]
@@ -150,7 +155,7 @@ artworkInPlace v = list [ artSite v, v "inrelation", place ]
 
 
 manyArtworks :: Vocab -> TextGenCh
-manyArtworks v = list [ aNumberOf, p66 $ v "aesthetic", v "artwork" ]
+manyArtworks v = list [ aNumberOf, p66 $ artAdj v, v "artwork" ]
 
 manyArtworksInPlace :: Vocab -> TextGenCh
 manyArtworksInPlace v = list [
