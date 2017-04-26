@@ -8,6 +8,7 @@ charming
 child-like
 colourful
 cozy
+crazy
 cuddly
 curious
 dangerous
@@ -16,8 +17,10 @@ dazzling
 delicate
 delightful
 detailed
+devised
 dizzying
 eerie
+eldritch
 enchanting
 encouraging
 enormous
@@ -26,7 +29,9 @@ erotic
 exciting
 exquisite
 fascinating
+fantastic
 fun-filled
+fussy
 futuristic
 gigantic
 haunting
@@ -38,11 +43,15 @@ inviting
 lovely
 luxurious
 memorable
+monotone
 moody
 mysterious
+naïve
 new
 ornate
+outré
 pastel
+playful
 pointed
 provocative
 psychedelic
@@ -57,8 +66,10 @@ thought-provoking
 tiny
 transgressive
 twee
+uncanny
 unsettling
 welcoming
 whimsical
+wild
 wistful
 wonderful

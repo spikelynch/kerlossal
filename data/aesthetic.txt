@@ -15,7 +15,6 @@ cubist
 cyberpunk
 dadaist
 deconstructed
-devised
 disco
 dub
 ephemeral
@@ -26,6 +25,8 @@ feminist
 formalist
 futurist
 gothic
+grime
+grimdark
 grunge
 hand-painted
 hyperrealist
@@ -44,10 +45,8 @@ minimalist
 mixed-media
 mixed-metal
 modernist
-monotone
-naïve
 oulipian
-outré
+outsider
 paleo
 political
 pop
@@ -76,3 +75,4 @@ transcendentalist
 ubiquitous
 ultramontanist
 vapourwave
+wonky
