@@ -11,6 +11,7 @@ import System.Environment (getArgs)
 import System.Directory (getDirectoryContents)
 import Text.Regex.Posix
 import qualified Data.Text as T
+import Text.Read (readMaybe)
 import Text.Blaze
 import Text.Blaze.Renderer.Pretty
 import qualified Data.Text.IO as Tio
@@ -242,13 +243,20 @@ testescape :: Vocab -> TextGenCh
 testescape _ = word "Mix & match <hi there> this is bad for HTML'''"
         
 
-max_length :: Int
-max_length = 140
+default_max_length :: Int
+default_max_length = 140
+
+maxLength :: [ String ] -> Int
+maxLength (a:b:cs) = case readMaybe b of
+  (Just i) -> i
+  Nothing  -> default_max_length
+maxLength _        = default_max_length
 
 main :: IO ()
 main = do
   args <- getArgs
   v <- loadVocab (getDir args)
+  max_length <- return $ maxLength args
   cr <- return $ kerlossus v
   gf <- return $ runTextGen cr
   result <- iterateUntil (\s -> length s <= max_length) $ do
