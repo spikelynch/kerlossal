@@ -3,6 +3,7 @@ amphitheatre
 amusement park
 apartment
 bordello
+bot
 bower
 buffet
 carnival
