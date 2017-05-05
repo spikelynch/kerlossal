@@ -9,16 +9,12 @@ black-and-white
 brutalist
 classical
 communist
-constrained
 constructivist
 cubist
 cyberpunk
 dadaist
-deconstructed
 disco
 dub
-ephemeral
-erotic
 fascist
 fauvist
 feminist
@@ -28,14 +24,11 @@ gothic
 grime
 grimdark
 grunge
-hand-painted
 hyperrealist
 idealistic
-ironic
 kaleidoscopic
-kinetic
 krautrock
-liminal
+loli
 lowbrow
 magical realist
 mannerist
@@ -56,13 +49,12 @@ procedurally-generated
 pre-Raphaelite
 provocative
 psychedelic
+psychological
 punk
 realist
 retro
 rococo
-romantic
 situationist
-site-specific
 social realist
 soviet realist
 spiritual
@@ -70,9 +62,7 @@ steampunk
 superdeformed
 surreal
 surrealist
-trashy
 transcendentalist
-ubiquitous
 ultramontanist
 vapourwave
 wonky
