@@ -1,6 +1,7 @@
 adorable
 amazing
 appropriate
+appropriated
 artful
 aware
 beautiful
@@ -9,6 +10,7 @@ charming
 child-like
 colourful
 compelling
+corny
 constrained
 cozy
 crazy
@@ -37,6 +39,7 @@ exciting
 exquisite
 fascinating
 fantastic
+folksy
 fun-filled
 fussy
 futuristic
@@ -55,6 +58,7 @@ inviting
 ironic
 kinetic
 liminal
+lit
 lovely
 luxurious
 magical
@@ -62,6 +66,7 @@ magnificent
 memorable
 monotone
 moody
+moving
 mysterious
 naïve
 new
@@ -86,6 +91,7 @@ spooky
 suggestive
 surprising
 surreal
+sweeping
 terrifying
 thought-provoking
 tiny

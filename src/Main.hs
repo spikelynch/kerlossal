@@ -193,6 +193,8 @@ artStuff v = choose [
 
 -- The next TextGenChs are the alternative sentences
 
+-- An Artist Uses Materials to transform a Boring Place into a Good Place
+
 transformsSite :: Vocab -> TextGenCh
 transformsSite v = list [ someone, uses, artStuff v, transformation ]
   where someone = artist v
@@ -200,6 +202,9 @@ transformsSite v = list [ someone, uses, artStuff v, transformation ]
         transformation = choose [ o2n, o ]
         o2n = list [ word "to", v "transform", oldSite v, word "into", artSite v ]
         o = list [ word "to transform", oldSite v ]
+
+
+-- An Artist Transforms Some Things Into Other Things
 
 -- there are different vocab lists for "creates X out of Y" to match
 -- verbs with prepositions
@@ -214,16 +219,21 @@ transformsThings v = choose [ into, outof, with ]
         outof = list [ a, v "creates_outof", ws, choose [ word "out of", word "from" ], t ]
         with = list [ a, v "creates_with", ws, word "with", t ]
 
+-- Artworks By Artist
 
 artworksByArtist :: Vocab -> TextGenCh
 artworksByArtist v = list [ generalArtwork v, word "by", artist v ]
+
+-- A Thing Shaped Like Another Thing
 
 structureShape :: Vocab -> TextGenCh
 structureShape v = choose [ locbefore, locafter ]
   where locbefore = list [ word "in", v "city", word ",", structure ]
         locafter = list [ structure, word "in", v "city" ]
         structure = list [ aan $ v "structure", v "like", aan $ v "thing" ]
-        
+
+
+-- A Bunch of Stuff Near A Place
 
 stuffInPlace :: Vocab -> TextGenCh
 stuffInPlace v = list [ amountOfStuff v, p, v "city", ma ]

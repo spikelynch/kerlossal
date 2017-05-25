@@ -57,3 +57,4 @@ infant
 soldier
 troubador
 necromancer
+hipster
