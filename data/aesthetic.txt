@@ -4,6 +4,7 @@ abstract
 aesthetic
 anamorphic
 avant-garde
+barbaric
 baroque
 black-and-white
 brutalist
@@ -49,6 +50,7 @@ modernist
 oulipian
 outsider
 paleo
+'pataphysical
 political
 pop
 pornographic
@@ -63,6 +65,7 @@ realist
 retro
 rococo
 scientific
+shamanic
 situationist
 social realist
 soviet realist

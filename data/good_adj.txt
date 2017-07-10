@@ -72,6 +72,7 @@ naïve
 new
 numinous
 ornate
+overwhelming
 outré
 pastel
 playful
@@ -79,6 +80,7 @@ pointed
 profound
 provocative
 psychedelic
+resonant
 romantic
 self-actualising
 self-modifying
@@ -88,6 +90,7 @@ skewed
 somnolent
 sparkling
 spooky
+strange
 suggestive
 surprising
 surreal
@@ -95,12 +98,14 @@ sweeping
 terrifying
 thought-provoking
 tiny
+towering
 trashy
 transgressive
 twee
 ubiquitous
 uncanny
 unsettling
+vast
 welcoming
 whimsical
 wild

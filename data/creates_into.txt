@@ -2,6 +2,8 @@ sculpts
 carves
 crafts
 injects
+integrates
+builds
 repurposes
 makes
 transforms
