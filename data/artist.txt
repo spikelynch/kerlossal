@@ -1,60 +1,75 @@
-artist
-sculptor
-composer
-shaman
-performance artist
-painter
-senior citizen
-researcher
-docent
-police officer
-scientist
-dancer
-musician
-fibre artist
-craftsperson
-woodsman
-bricoleur
-flâneur
-schoolchild
-student
-vagrant
+activist
 art student
-professor
-ice dancer
-dancer
-merchant
-tribesman
-nomad
-shepherd
-lumberjack
-miner
 artisan
-farmer
-visiting fellow
-herdsman
-roustabout
+artist
+bard
+bricoleur
 carnie
-poet
-stranger
-outsider
-writer
-seamstress
-dressmaker
-sailor
-model
-fashion designer
+child
+clown
+composer
+contortionist
+craftsperson
+dancer
 designer
+developer
+docent
+dressmaker
+entrepreneur
+entrepreneuse
+farmer
+fashion designer
+fibre artist
+filmmaker
+flâneur
+graffiti artist
 graphic artist
 graphic designer
-programmer
-developer
-thaumaturge
-intern
-venture capitalist
-singer
-infant
-soldier
-troubador
-necromancer
+herdsman
 hipster
+ice dancer
+infant
+intern
+lumberjack
+jongleur
+merchant
+miner
+model
+musician
+necromancer
+nomad
+outsider
+painter
+performance artist
+philosopher
+poet
+police officer
+professor
+project manager
+programmer
+researcher
+roustabout
+sailor
+schoolchild
+scientist
+sculptor
+seamstress
+secretary
+senior citizen
+sex worker
+shaman
+shepherd
+singer
+soldier
+stranger
+student
+street artist
+thaumaturge
+tribesman
+troubador
+vagrant
+venture capitalist
+visiting fellow
+war bride
+woodsman
+writer

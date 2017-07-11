@@ -203,6 +203,14 @@ transformsSite v = list [ someone, uses, artStuff v, transformation ]
         o2n = list [ word "to", v "transform", oldSite v, word "into", artSite v ]
         o = list [ word "to transform", oldSite v ]
 
+-- An Artist fills an Old Site with Artworks
+
+fillsSite :: Vocab -> TextGenCh
+fillsSite v = list [ artist v, fills, osite, word "with", art ]
+  where fills = v "fills"
+        osite = oldSite v
+        art = choose [ artworks v, artworkSimple v ]
+
 
 -- An Artist Transforms Some Things Into Other Things
 
@@ -242,11 +250,12 @@ stuffInPlace v = list [ amountOfStuff v, p, v "city", ma ]
 
 kerlossus :: Vocab -> TextGenCh
 kerlossus v = weighted [
-  ( 10, transformsSite v ),
-  ( 30, transformsThings v ),
-  ( 30, artworksByArtist v ),
-  ( 10, stuffInPlace v ),
-  ( 20, structureShape v )
+  ( 15, transformsSite v ),
+  ( 15, fillsSite v ),
+  ( 15, transformsThings v ),
+  ( 15, artworksByArtist v ),
+  ( 15, stuffInPlace v ),
+  ( 15, structureShape v )
   ]
 
 testescape :: Vocab -> TextGenCh
