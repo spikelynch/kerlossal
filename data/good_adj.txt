@@ -3,11 +3,16 @@ amazing
 appropriate
 appropriated
 artful
+astonishing
 aware
 beautiful
 bewildering
+bold
+camp
+campy
 charming
 child-like
+chintzy
 colourful
 compelling
 corny
@@ -56,6 +61,8 @@ ineffable
 intricate
 inviting
 ironic
+kicky
+kinky
 kinetic
 liminal
 lit
@@ -71,8 +78,10 @@ mysterious
 naïve
 new
 numinous
+nutritious
 ornate
 overwhelming
+outlandish
 outré
 pastel
 playful

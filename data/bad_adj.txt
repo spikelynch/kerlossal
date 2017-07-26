@@ -1,8 +1,11 @@
 abandoned
+aging
+banal
 blasted
 bleak
 bogged
 chilly
+clichéd
 cold
 condemned
 contaminated
@@ -38,12 +41,15 @@ no-good
 off-limits
 overdrawn
 overlooked
+poisoned
 problematic
 quarantined
 quiet
+rented
 ruined
 run-down
 shabby
+sleazy
 sleepy
 terminal
 toxic
