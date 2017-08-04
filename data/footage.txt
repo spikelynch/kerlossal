@@ -1,17 +1,30 @@
-footage
-video
-film
-videos
-films
 CD-ROMs
-field recordings
-mixtapes
-remixes
-soundtracks
-show tunes
-recordings
+animations
 audio art
+ballads
+cabaret
+debriefings
+documentaries
+field recordings
+film
+films
+footage
+home movies
+interviews
+karaoke
+mixtapes
+music videos
+oral histories
+pornography
+press conferences
+recordings
+remixes
+renderings
+scores
+show tunes
 sound art
 soundscapes
-renderings
-
+soundtracks
+torch songs
+video
+videos
