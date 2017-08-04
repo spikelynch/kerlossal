@@ -145,12 +145,12 @@ oldSite v = choose [ site, factory ]
         adject = choose [ v "bad_adj", v "nationality" ]
         
 artSite :: Vocab -> TextGenCh
-artSite v = aan $ list [ p66 $ v "good_adj", v "magic_site" ]
+artSite v = aan $ list [ v "good_adj", v "magic_site" ]
+
 
 artworkInPlace :: Vocab -> TextGenCh
-artworkInPlace v = list [ artSite v, v "inrelation", place, ma ]
+artworkInPlace v = list [ artStuff v, v "inrelation", place ]
   where place = choose [ v "city", oldSite v ]
-        ma = p50 $ list [ word "by", artist v ]
 
 
 manyArtworks :: Vocab -> TextGenCh
@@ -248,11 +248,11 @@ stuffInPlace v = list [ amountOfStuff v, v "inrelation", v "city", ma ]
 kerlossus :: Vocab -> TextGenCh
 kerlossus v = weighted [
   ( 15, transformsSite v ),
-  ( 15, fillsSite v ),
-  ( 15, transformsThings v ),
-  ( 15, artworksByArtist v ),
-  ( 15, stuffInPlace v ),
-  ( 15, structureShape v )
+  ( 10, fillsSite v ),
+  ( 18, transformsThings v ),
+  ( 20, artworksByArtist v ),
+  ( 10, stuffInPlace v ),
+  ( 5, structureShape v )
   ]
 
 testescape :: Vocab -> TextGenCh
