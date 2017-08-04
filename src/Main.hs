@@ -36,13 +36,10 @@ import TextGen (
 
 type TextGenCh = TextGen StdGen [[Char]]
 
---type Vocab = Map String TextGenCh
-
 type Vocab = (String -> TextGenCh)
 
 isTextFile :: String -> Bool
 isTextFile f = f =~ ".txt$"
-
 
 
 loadVocab :: String -> IO Vocab
@@ -151,8 +148,9 @@ artSite :: Vocab -> TextGenCh
 artSite v = aan $ list [ p66 $ v "good_adj", v "magic_site" ]
 
 artworkInPlace :: Vocab -> TextGenCh
-artworkInPlace v = list [ artSite v, v "inrelation", place ]
+artworkInPlace v = list [ artSite v, v "inrelation", place, ma ]
   where place = choose [ v "city", oldSite v ]
+        ma = p50 $ list [ word "by", artist v ]
 
 
 manyArtworks :: Vocab -> TextGenCh
@@ -244,9 +242,8 @@ structureShape v = choose [ locbefore, locafter ]
 -- A Bunch of Stuff Near A Place
 
 stuffInPlace :: Vocab -> TextGenCh
-stuffInPlace v = list [ amountOfStuff v, p, v "city", ma ]
-  where p = choose $ map word [ "in", "above", "below", "outside", "over", "behind" ]
-        ma = p50 $ list [ word "by", artist v ]
+stuffInPlace v = list [ amountOfStuff v, v "inrelation", v "city", ma ]
+  where ma = p50 $ list [ word "by", artist v ]
 
 kerlossus :: Vocab -> TextGenCh
 kerlossus v = weighted [
