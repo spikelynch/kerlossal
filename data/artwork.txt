@@ -4,7 +4,9 @@ cartoons
 collages
 drawings
 effigies
+engravings
 etchings
+frescoes
 films
 GIFs
 gouaches
@@ -23,6 +25,7 @@ rotogravures
 sculptures
 statues
 silhouettes
+silverpoints
 sketches
 tapestries
 topiary
