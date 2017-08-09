@@ -1,5 +1,7 @@
 abandoned
 aging
+appalling
+bad
 banal
 blasted
 bleak
@@ -17,6 +19,7 @@ decaying
 decrepit
 deserted
 desolate
+disappointing
 diseased
 dismal
 distressed
@@ -34,6 +37,7 @@ gentrified
 ghostly
 godforsaken
 hidden
+lonely
 low-rent
 mismanaged
 muddy
@@ -48,6 +52,7 @@ quiet
 rented
 ruined
 run-down
+sad
 shabby
 sleazy
 sleepy
@@ -58,7 +63,9 @@ underutilised
 unfashionable
 uninhabited
 uninviting
+unsightly
 unoccupied
 vanishing
 vanquished
 waterlogged
+wretched
