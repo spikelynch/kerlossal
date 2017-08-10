@@ -32,6 +32,7 @@ import TextGen (
   , smartjoin
   , dumbjoin
   , upcase
+  , postgen
   , loadVocab
   )
 
@@ -56,20 +57,6 @@ p33 = perhaps ( 1, 3 )
 
 p66 = perhaps ( 2, 3 )
 
--- a utility which runs a generator until it gets two different
--- results
-
-twoDifferent :: TextGenCh -> IO ( [[Char]], [[Char]] )
-twoDifferent g = do
-  gf <- return $ runTextGen g
-  r1 <- getStdRandom gf
-  r2 <- iterateUntil (\s -> not $ dumbmatch r1 s) $ do
-    getStdRandom gf
-  return ( r1, r2 )
-  
-
-dumbmatch :: [[Char]] -> [[Char]] -> Bool
-dumbmatch r1 r2 = (dumbjoin r1) == (dumbjoin r2)
 
 -- an abbreviation for choosing from vocabs
 
@@ -164,6 +151,18 @@ manyArtworksInPlace v = list [
   choose [ oldSite v, artSite v ]
   ]
 
+detailedArtworks :: Vocab -> TextGenCh
+detailedArtworks v = list [ aesthAdj, form, works ]
+  where aesthAdj = p66 $ choose [ c v "good_adj", c v "aesthetic", c v "participle" ]
+        form = weighted [ ( 66, quoted $ c v "thing"), ( 33, c v "thing") ] 
+        works = choose [ c v "artwork", c v "artwork_non_rep" ]
+
+
+quoted :: TextGenCh -> TextGenCh
+quoted g = postgen q g
+  where q ws = [ concat [ "\"", cap $ dumbjoin ws, "\"" ] ] 
+        cap []   = []
+        cap (c:cs) = toUpper c : cs
 
 videoArt :: Vocab -> TextGenCh
 videoArt v = list [ p33 $ c v "good_adj", c v "footage_adj", c v "footage" ]
@@ -173,6 +172,7 @@ videoArt v = list [ p33 $ c v "good_adj", c v "footage_adj", c v "footage" ]
 generalArtwork :: Vocab -> TextGenCh
 generalArtwork v = weighted [
   ( 40, artworks v ),
+  ( 30, detailedArtworks v ),
   ( 20, artworkInPlace v ),
   ( 20, manyArtworksInPlace v),
   ( 20, manyArtworks v),
