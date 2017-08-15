@@ -102,23 +102,20 @@ amountOfStuff :: Vocab -> TextGenCh
 amountOfStuff v = list [ aNumberOf, c v "measures", word "of", c v "substance" ]
 
 
--- use choose2 and a do to make sure the things are different
--- add things growing out of, sprouting or swallowing other things
-
-subject' :: Vocab -> TextGenCh
-subject' v = choose [ depiction, combination ]
-  where depiction = list [ word "of", things, p50 $ list [ word "and", things ] ]
-        combination = list [ c v "combining", things, word "with", things ]
-        things = c v "things"
-
---combination :: Vocab -> TextGenCh
---combination v = do
---  ( t1, t2 ) <- choose2 $ vlist $ v "things"
-
 subject :: Vocab -> TextGenCh
-subject v = do
-  ( t1, t2 ) <- choose (v "things")
-  list [ c v "combining", t1, word "and", t2 ]
+subject v = choose [ depiction, combination, sprouting ]
+  where depiction = list [ word "of", choose [ c v "things", t1andt2 ] ]
+        combination = list [ c v "combining", t1witht2 ]
+        sprouting = list [ word "of", twothings v (c v "sprouting") ]
+        t1andt2 = twothings v (word "and")
+        t1witht2 = twothings v (word "with")
+
+
+twothings :: Vocab -> TextGenCh -> TextGenCh
+twothings v conj = do
+  ( t1, t2 ) <- choose $ v "things"
+  list [ t1, conj, t2 ]
+
 
 
 
@@ -251,7 +248,7 @@ kerlossus v = weighted [
   ( 15, transformsSite v ),
   ( 10, fillsSite v ),
   ( 18, transformsThings v ),
-  ( 20, artworksByArtist v ),
+  ( 25, artworksByArtist v ),
   ( 10, stuffInPlace v ),
   ( 5, structureShape v )
   ]
