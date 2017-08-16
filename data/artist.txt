@@ -2,6 +2,7 @@ activist
 art student
 artisan
 artist
+author
 bard
 bricoleur
 carnie
@@ -10,38 +11,56 @@ clown
 composer
 contortionist
 craftsperson
+critic
 dancer
+day trader
 designer
 developer
 docent
+doctor
+dramatist
 dressmaker
 entrepreneur
 entrepreneuse
 farmer
+father
 fashion designer
 fibre artist
 filmmaker
 flâneur
+geologist
+geomancer
 graffiti artist
 graphic artist
 graphic designer
 herdsman
 hipster
+housewife
 ice dancer
 infant
 intern
+longshoreman
 lumberjack
 jongleur
+juggler
+judge
+masseuse
+mathematician
 merchant
 miner
 model
+mother
 musician
 necromancer
 nomad
+nurse
 outsider
+paleontologist
 painter
+partisan
 performance artist
 philosopher
+physicist
 poet
 police officer
 professor
@@ -51,6 +70,7 @@ researcher
 roustabout
 sailor
 schoolchild
+scholar
 scientist
 sculptor
 seamstress
@@ -72,4 +92,5 @@ venture capitalist
 visiting fellow
 war bride
 woodsman
+widow
 writer
