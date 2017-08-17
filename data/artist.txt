@@ -3,94 +3,196 @@ art student
 artisan
 artist
 author
+bandleader
+bandmaster
+barber
 bard
+bookbinder
+bricklayer
 bricoleur
+cabinetmaker
+cameraman
 carnie
+carpenter
+cartwright
 child
+choirmaster
+classic
+classicist
+cleaner
+clocksmith
 clown
+coachbuilder
+coiffeur
+coiffeuse
+colorist
+commercial artist
 composer
+construction worker
+constructivist
 contortionist
+contrapuntist
+cooper
+coppersmith
+craftsman
 craftsperson
 critic
+cubist
+currier
 dancer
+dauber
 day trader
+decorator
 designer
 developer
+diemaker
+distortionist
 docent
 doctor
 dramatist
 dressmaker
+drum major
+drum majorette
+engraver
 entrepreneur
 entrepreneuse
+etcher
+expressionist
 farmer
-father
 fashion designer
+father
 fibre artist
 filmmaker
+florist
 flâneur
+genre painter
 geologist
 geomancer
+glass cutter
+glassblower
+goldbeater
 graffiti artist
 graphic artist
 graphic designer
 herdsman
 hipster
+hosier
 housewife
 ice dancer
+impressionist
 infant
 intern
+joiner
+jongleur
+judge
+juggler
+lampoon artist
+landscapist
+lithographer
 longshoreman
 lumberjack
-jongleur
-juggler
-judge
+luthier
+machinist
+mason
 masseuse
 mathematician
 merchant
+miller
+millwright
 miner
+miniaturist
+minimalist
 model
+modernist
 mother
+muralist
 musician
 necromancer
+newsagent
 nomad
 nurse
+oil painter
+old master
+orchestrator
 outsider
-paleontologist
 painter
+paleontologist
+paparazzo
+paperhanger
+parer
 partisan
+pavement artist
 performance artist
 philosopher
 physicist
+plowwright
+plumber
 poet
+pointillist
 police officer
+portraitist
+potter
+press photographer
 professor
-project manager
 programmer
+project manager
+psalmist
+pyrographer
+realist
 researcher
+rigger
+romanticist
+ropemaker
 roustabout
 sailor
-schoolchild
+scenic artist
 scholar
+schoolchild
 scientist
 sculptor
+sculptress
 seamstress
 secretary
 senior citizen
 sex worker
 shaman
 shepherd
+shipwright
 singer
+sketcher
 soldier
+songwriter
+splicer
+spot-welder
+steamfitter
 stranger
-student
 street artist
+student
+stylist
+suprematist
+surrealist
+symbolist
+symphonist
+tanner
+taxidermist
+thatcher
 thaumaturge
+tinter
+tobacconist
 tribesman
 troubador
+upholsterer
 vagrant
 venture capitalist
+virtuoso
 visiting fellow
+wagonwright
 war bride
-woodsman
+watercolorist
+weaver
+wheelwright
 widow
+window dresser
+woodcarver
+woodsman
 writer
