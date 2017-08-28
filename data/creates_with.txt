@@ -12,3 +12,4 @@ composes
 builds
 arranges
 juxtaposes
+imagines
