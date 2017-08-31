@@ -9,6 +9,7 @@ beautiful
 bewildering
 bold
 brilliant
+bullshit
 camp
 campy
 charming
@@ -62,10 +63,12 @@ hand-crafted
 high-concept
 hilarious
 hopeful
+humorous
 hypnotic
 improving
 incredible
 ineffable
+instructive
 intricate
 inviting
 ironic
