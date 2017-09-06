@@ -50,6 +50,7 @@ exciting
 exquisite
 fascinating
 fantastic
+festive
 floral
 folksy
 fun-filled
@@ -110,6 +111,7 @@ skewed
 somnolent
 sparkling
 spooky
+startling
 strange
 suggestive
 surprising
@@ -124,6 +126,7 @@ transgressive
 twee
 ubiquitous
 uncanny
+unexpected
 unsettling
 useful
 vast
@@ -134,3 +137,4 @@ wild
 wistful
 woke
 wonderful
+
