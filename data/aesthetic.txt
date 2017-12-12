@@ -3,6 +3,7 @@ Romanesque
 abstract
 aesthetic
 anamorphic
+augmented
 avant-garde
 barbaric
 baroque
@@ -80,4 +81,5 @@ transcendentalist
 tribal
 ultramontanist
 vaporwave
+wearable
 wonky
