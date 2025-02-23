@@ -10,7 +10,6 @@ import System.Random
 import System.Environment (getArgs)
 import System.Directory (getDirectoryContents)
 import Text.Regex.Posix
-import qualified Data.Text as T
 import Text.Read (readMaybe)
 import Text.Blaze
 import Text.Blaze.Renderer.Pretty
@@ -274,4 +273,4 @@ main = do
   result <- iterateUntil (\s -> length s <= max_length) $ do
     kerlossal <- getStdRandom $ runTextGen $ kerlossus v
     return $ mysmartjoin kerlossal
-  putStrLn $ renderMarkup $ preEscapedToMarkup $ titlecase $ T.pack result
+  putStrLn $ renderMarkup $ preEscapedToMarkup $ titlecase result
